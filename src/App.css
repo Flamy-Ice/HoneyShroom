@@ -172,7 +172,19 @@ body {
   z-index: 15;        
   
   top: 108%;           
-  left: 34%;           
+  left: 34%; 
+
+  /* Matches the animation style of paper-price-svg */
+  cursor: pointer;
+  transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+  will-change: transform;
+  backface-visibility: hidden;
+  transform: scale(1) translateZ(0);
+}
+
+/* Hover effect for email group */
+.email-group:hover {
+  transform: scale(1.05) translateY(-5px);
 }
 
 /* Individual email icon */

@@ -18,6 +18,12 @@ import emailIcon from './assets/Header/EmailIcon.svg'
 import emailText from './assets/Header/EmailText.svg'
 
 function App() {
+  /* Handler to copy email address to clipboard */
+  const handleCopyEmail = () => {
+    const email = "honeyshroomart@gmail.com";
+    navigator.clipboard.writeText(email);
+  };
+
   return (
     <div className="app-wrapper">
       <main>
@@ -79,8 +85,8 @@ function App() {
 
           </div>
 
-          {/* EMAIL GROUP: Email information and icon */}
-          <div className="email-group">
+          {/* EMAIL GROUP: Email information and icon with copy-to-clipboard functionality */}
+          <div className="email-group" onClick={handleCopyEmail} title="Click to copy email">
             <img 
               src={emailIcon} 
               alt="Email Icon" 
