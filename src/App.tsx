@@ -2,20 +2,27 @@ import './App.css'
 import titleImg from './assets/Header/HoneyShroomTitle.svg'
 import priceListImg from './assets/Header/PriceList.svg'
 import paperPriceImg from './assets/Header/PaperPrice.svg'
+import blankPaperImg from './assets/Header/BlankPaper.svg'
 
 function App() {
   return (
     <div className="app-wrapper">
       <main>
         <header className="hero-container">
-          {/* Warstwa tła (papier) - pod spodem dzięki z-index: 1 */}
+          {/* Warstwy tła (papiery) */}
           <img 
             src={paperPriceImg} 
             alt="Paper Background" 
             className="paper-price-svg" 
           />
           
-          {/* Warstwa tekstowa - na wierzchu dzięki z-index: 2 */}
+          <img 
+            src={blankPaperImg} 
+            alt="Blank Paper Background" 
+            className="blank-paper-svg" 
+          />
+          
+          {/* Warstwa tekstowa - na wierzchu */}
           <div className="text-content">
             <img 
               src={titleImg} 
