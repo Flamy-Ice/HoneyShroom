@@ -66,6 +66,20 @@ body {
   left: calc(-1 * (100vw - 100%) / 2); 
   top: 8%; 
   z-index: 5; 
+  pointer-events: auto;
+  cursor: pointer;
+  transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+  will-change: transform;
+  backface-visibility: hidden;
+  transform: scale(1) translateZ(0);
+  clip-path: polygon(100% 89%, 95% 100%, 0% 100%, 0% 0%, 77% 1%, 96% 70%);
+}
+
+/* Hover effect for price paper */
+.paper-price-svg:hover {
+  /* Zwiększamy skalę minimalnie mniej lub zostawiamy 1.05, 
+     ale dodajemy delikatne uniesienie, by wzmocnić efekt */
+  transform: scale(1.05) translateY(-5px); 
 }
 
 /* Bottom decorative blank paper */
