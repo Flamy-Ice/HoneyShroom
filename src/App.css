@@ -71,6 +71,23 @@ main {
   /* ----------------------------------------- */
 }
 
+/* --- NOWY ELEMENT: LOGO VGEN --- */
+.vgen-logo-svg {
+  position: absolute;
+  pointer-events: auto; /* Pozwala na kliknięcie, jeśli zrobisz z tego link */
+  
+  /* --- MANIPULACJA POZYCJĄ I WIELKOŚCIĄ --- */
+  width: 170px;       /* Zmień tę wartość, aby powiększyć/pomniejszyć */
+  left: 41%;         /* Pozycja w poziomie względem lewej krawędzi */
+  top: 70%;          /* Pozycja w pionie względem góry kontenera */
+  
+  /* z-index: 1 sprawia, że jest nad blank-paper (0), ale pod paper-price (2) */
+  z-index: 1;        
+  
+  /* Opcjonalnie: dodaj lekki obrót, jeśli chcesz, by pasowało do "rozrzuconego" papieru */
+  /* transform: rotate(-5deg); */
+}
+
 body {
   overflow-x: hidden;
   margin: 0;
