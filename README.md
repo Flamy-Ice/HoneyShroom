@@ -1,73 +1,91 @@
-# React + TypeScript + Vite
+# 🚀 HoneyShroom | Personal Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A sleek, modern, and high-performance portfolio website built to showcase creative work and technical expertise. This project focuses on clean UI/UX, speed, and type-safety.
 
-Currently, two official plugins are available:
+[Live Demo Link](https://link.com) (?)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## ✨ Features
 
-The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
+* **⚡ Blazing Fast:** Built with Vite for nearly instant Hot Module Replacement (HMR).
+* **🛡️ Type-Safe:** Fully implemented in TypeScript to ensure robust and maintainable code.
+* **📱 Fully Responsive:** Optimized for all screen sizes, from mobile devices to ultra-wide monitors.
+* **🎨 Modern UI:** Clean aesthetics with a focus on readability and smooth transitions.
+* **🔍 SEO Friendly:** Optimized metadata for better search engine visibility.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🛠️ Tech Stack
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+| Technology | Purpose |
+| :--- | :--- |
+| **React 18** | UI Library |
+| **TypeScript** | Static Typing |
+| **Vite** | Next-generation Frontend Tooling |
+| **ESLint** | Code Quality & Linting |
+| **[Tailwind CSS / SCSS]** | Styling (adjust according to what you use) |
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+---
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 🚀 Getting Started
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+To get a local copy up and running, follow these simple steps:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### Prerequisites
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Make sure you have **Node.js** (version 18 or higher) installed.
+
+### Installation
+
+1. **Clone the repository:**
+   ```sh
+   git clone [https://github.com/Flamy-Ice/HoneyShroom](https://github.com/Flamy-Ice/HoneyShroom)
+
+2. **Navigate into the project directory:**
+   ```sh
+   cd portfolio-name
+
+3. **Install dependencies:**
+   ```sh
+   npm install
+
+4. **Start the development server:**
+   ```sh
+   npm run dev
+
+The application will be available at **http://localhost:5173**.
+
+---
+
+## 🏗️ Project Structure (?)
+src/
+ ├── assets/        # Images, icons, and fonts
+ ├── components/    # Reusable UI components
+ ├── hooks/         # Custom React hooks
+ ├── pages/         # Main view components
+ ├── styles/        # Global styles and themes
+ └── main.tsx       # Application entry point
+
+---
+
+## 🔧 Scripts
+**npm run dev** | Starts the development server.
+**npm run build** | Builds the project for production.
+**npm run lint** | Runs ESLint to check for code issues.
+**npm run preview** | Locally previews the production build.
+
+---
+
+## 👤 Author (?)
+*HoneyShroom*
+**SocialMedia** | @ (https://link.com)
+
+---
+
+## 📄 License
+This project is licensed under the MIT License. Feel free to use it for your own purposes.
+
+---
+
+Developed with ❤️ by Jakub Lewandowski
