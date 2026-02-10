@@ -5,7 +5,8 @@ import paperPriceImg from './assets/Header/PaperPrice.svg'
 import blankPaperImg from './assets/Header/BlankPaper.svg'
 import twitterLogo from './assets/Header/Twitterlogo.svg'
 import vgenLogo from './assets/Header/vgenlogo.svg'
-import blueskyLogo from './assets/Header/blueskylogo.svg' // Nowy import
+import blueskyLogo from './assets/Header/blueskylogo.svg'
+import furaffinityLogo from './assets/Header/furaffinitylogo.svg' // Nowy import
 
 function App() {
   return (
@@ -34,11 +35,18 @@ function App() {
             className="vgen-logo-svg" 
           />
 
-          {/* NOWY ELEMENT: Logo Bluesky */}
+          {/* Logo Bluesky */}
           <img 
             src={blueskyLogo} 
             alt="Bluesky Logo" 
             className="bluesky-logo-svg" 
+          />
+
+          {/* NOWY ELEMENT: Logo FurAffinity */}
+          <img 
+            src={furaffinityLogo} 
+            alt="FurAffinity Logo" 
+            className="furaffinity-logo-svg" 
           />
           
           <img 

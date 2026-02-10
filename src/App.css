@@ -77,20 +77,30 @@ main {
   z-index: 1;
 }
 
-/* --- NOWY ELEMENT: LOGO BLUESKY --- */
+/* --- LOGO BLUESKY --- */
 .bluesky-logo-svg {
   position: absolute;
   pointer-events: auto;
+  width: 150px;
+  left: 26%;
+  top: 90%;
+  z-index: 1;
+}
+
+/* --- NOWY ELEMENT: LOGO FURAFFINITY --- */
+.furaffinity-logo-svg {
+  position: absolute;
+  pointer-events: auto;
   
-  /* --- MANIPULACJA POZYCJĄ I WIELKOŚCIĄ --- */
-  width: 150px;       /* Zmień wielkość ikonki */
-  left: 26%;         /* Zmień pozycję w poziomie */
-  top: 90%;          /* Zmień pozycję w pionie */
+  /* --- TUTAJ MANIPULUJ WIELKOŚCIĄ I POZYCJĄ --- */
+  width: 150px;        /* Wielkość ikonki */
+  left: 38%;          /* Pozycja w poziomie (względem lewej krawędzi) */
+  top: 100%;           /* Pozycja w pionie (względem góry) */
   
-  z-index: 1;        /* Nad blank-paper, pod paper-price */
+  z-index: 1;         /* Nad blank-paper, pod paper-price */
   
-  /* Opcjonalnie: lekki obrót, żeby pasowało do reszty */
-  /* transform: rotate(5deg); */
+  /* Opcjonalnie: odkomentuj poniżej, by obrócić logo */
+  /* transform: rotate(-5deg); */
 }
 
 body {
