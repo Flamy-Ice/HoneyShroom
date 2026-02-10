@@ -9,17 +9,16 @@ main {
   flex-direction: column;
   align-items: center;
   margin-bottom: 2rem;
-  position: relative; /* Punkt odniesienia dla absolutnego papieru */
+  position: relative;
   min-height: 600px; 
 }
 
-/* Kontener dla tekstów (obrazków tekstowych) */
 .text-content {
   display: flex;
   flex-direction: column;
   align-items: center;
   position: relative;
-  z-index: 2; /* Wyższa warstwa niż papier */
+  z-index: 3; /* Podbite, aby być nad wszystkim */
   width: 100%;
 }
 
@@ -35,36 +34,41 @@ main {
 
 .pricelist-svg {
   width: 900px;
-  margin-top: -100px; /* Nakładanie się na tytuł */
+  margin-top: -100px;
 }
 
-/* Pierwsza warstwa papieru */
+/* Pierwsza warstwa papieru (na górze logo) */
 .paper-price-svg {
   position: absolute;
   width: 770px; 
   left: calc(-1 * (100vw - 100%) / 2); 
   top: 12%; 
-  z-index: 1; 
+  z-index: 2; 
   pointer-events: none;
 }
 
-/* NOWY ELEMENT: Druga warstwa papieru (pod spodem) */
+/* Druga warstwa papieru (pod spodem logo) */
 .blank-paper-svg {
   position: absolute;
-  /* --- MOŻESZ TUTAJ MANIPULOWAĆ ROZMIAREM I POZYCJĄ --- */
   width: 500px; 
-  
-  /* Przesunięcie w prawo względem krawędzi (dodano +150px) */
   left: 17%; 
-  
-  /* Przesunięcie w dół względem góry (niżej niż 10%) */
   top: 58%; 
-  
-  /* Niższy index niż .paper-price-svg (1), więc będzie pod nim */
   z-index: 0; 
-  /* -------------------------------------------------- */
-  
   pointer-events: none;
+}
+
+/* --- NOWY ELEMENT: LOGO TWITTERA --- */
+.twitter-logo-svg {
+  position: absolute;
+  pointer-events: auto; /* Pozwala na kliknięcie w logo, jeśli dodasz link */
+  
+  /* --- MANIPULACJA POZYCJĄ I WIELKOŚCIĄ --- */
+  width: 125px;       /* Wielkość ikonki */
+  left: 30%;         /* Pozycja w poziomie (dostosuj do blank-paper) */
+  top: 65%;          /* Pozycja w pionie (dostosuj do blank-paper) */
+  
+  z-index: 1;        /* Wyżej niż blank-paper (0), niżej niż paper-price (2) */
+  /* ----------------------------------------- */
 }
 
 body {

@@ -3,26 +3,35 @@ import titleImg from './assets/Header/HoneyShroomTitle.svg'
 import priceListImg from './assets/Header/PriceList.svg'
 import paperPriceImg from './assets/Header/PaperPrice.svg'
 import blankPaperImg from './assets/Header/BlankPaper.svg'
+import twitterLogo from './assets/Header/Twitterlogo.svg' // Nowy import
 
 function App() {
   return (
     <div className="app-wrapper">
       <main>
         <header className="hero-container">
-          {/* Warstwy tła (papiery) */}
-          <img 
-            src={paperPriceImg} 
-            alt="Paper Background" 
-            className="paper-price-svg" 
-          />
+          {/* --- WARSTWY TŁA --- */}
           
           <img 
             src={blankPaperImg} 
             alt="Blank Paper Background" 
             className="blank-paper-svg" 
           />
+
+          {/* Logo Twittera nałożone na blank-paper */}
+          <img 
+            src={twitterLogo} 
+            alt="Twitter Logo" 
+            className="twitter-logo-svg" 
+          />
           
-          {/* Warstwa tekstowa - na wierzchu */}
+          <img 
+            src={paperPriceImg} 
+            alt="Paper Background" 
+            className="paper-price-svg" 
+          />
+          
+          {/* --- WARSTWA TEKSTOWA --- */}
           <div className="text-content">
             <img 
               src={titleImg} 
