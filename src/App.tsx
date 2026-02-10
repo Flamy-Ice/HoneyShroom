@@ -7,6 +7,9 @@ import twitterLogo from './assets/Header/Twitterlogo.svg'
 import vgenLogo from './assets/Header/vgenlogo.svg'
 import blueskyLogo from './assets/Header/blueskylogo.svg'
 import furaffinityLogo from './assets/Header/furaffinitylogo.svg'
+// NOWE IMPORTY:
+import emailIcon from './assets/Header/EmailIcon.svg'
+import emailText from './assets/Header/EmailText.svg'
 
 function App() {
   return (
@@ -24,7 +27,7 @@ function App() {
               className="blank-paper-svg" 
             />
 
-            {/* GRUPA LOGOTYPÓW (Wewnątrz grupy papierów) */}
+            {/* GRUPA LOGOTYPÓW */}
             <div className="logos-group">
               <img src={twitterLogo} alt="Twitter Logo" className="twitter-logo-svg" />
               <img src={vgenLogo} alt="VGen Logo" className="vgen-logo-svg" />
@@ -51,6 +54,20 @@ function App() {
               src={priceListImg} 
               alt="Price List" 
               className="header-image pricelist-svg" 
+            />
+          </div>
+
+          {/* NOWA GRUPA: EMAIL */}
+          <div className="email-group">
+            <img 
+              src={emailIcon} 
+              alt="Email Icon" 
+              className="email-icon-svg" 
+            />
+            <img 
+              src={emailText} 
+              alt="Email Address" 
+              className="email-text-svg" 
             />
           </div>
 

@@ -15,7 +15,7 @@ body {
   align-items: center;
   margin-bottom: 2rem;
   position: relative;
-  min-height: 800px; /* Zwiększone, by pomieścić wystające elementy */
+  min-height: 800px;
 }
 
 /* --- KONTENER GRUPY TEKSTOWEJ --- */
@@ -24,12 +24,8 @@ body {
   flex-direction: column;
   align-items: center;
   position: relative;
-  z-index: 10; /* Najwyższa warstwa */
+  z-index: 10;
   width: 100%;
-  
-  /* Tutaj możesz manipulować całą grupą tekstu */
-  /* transform: scale(0.9); */
-  /* margin-top: 20px; */
 }
 
 .header-image {
@@ -56,12 +52,8 @@ body {
   left: 0;
   pointer-events: none;
   z-index: 1;
-
-  /* Tutaj możesz manipulować obiema kartkami naraz */
-  /* transform: rotate(2deg); */
 }
 
-/* Pierwsza warstwa papieru (na górze logo) */
 .paper-price-svg {
   position: absolute;
   width: 780px; 
@@ -70,7 +62,6 @@ body {
   z-index: 5; 
 }
 
-/* Druga warstwa papieru (pod spodem logo) */
 .blank-paper-svg {
   position: absolute;
   width: 520px; 
@@ -86,16 +77,14 @@ body {
   height: 100%;
   top: -20%;
   left: 0;
-  z-index: 3; /* Pomiędzy blank-paper a paper-price */
+  z-index: 3;
   pointer-events: none;
-
-  /* Tutaj możesz manipulować wszystkimi ikonkami naraz */
   transform: scale(1.05) translateX(10px);
 }
 
 .logos-group img {
   position: absolute;
-  pointer-events: auto; /* Przywracamy klikalność dla samych ikonek */
+  pointer-events: auto;
 }
 
 .twitter-logo-svg {
@@ -120,4 +109,32 @@ body {
   width: 150px;
   left: 38%;
   top: 95%;
+}
+
+/* --- NOWA SEKCJA: EMAIL --- */
+.email-group {
+  position: absolute;
+  display: flex;
+  align-items: center; 
+  gap: 5px;           
+  z-index: 15;        
+  
+  /* POŁOŻENIE CAŁEJ GRUPY (Ikona + Tekst) */
+  top: 108%;           
+  left: 34%;           
+}
+
+.email-icon-svg {
+  width: 50px;
+  height: auto;
+  /* Ikona zostaje na miejscu bazowym flexboxa */
+}
+
+.email-text-svg {
+  width: 400px;
+  height: auto;
+
+  /* TUTAJ MANIPULUJESZ WYSOKOŚCIĄ SAMEGO TEKSTU */
+  /* Wartości ujemne (np. -10px) podnoszą tekst do góry */
+  transform: translateY(-7px); 
 }
