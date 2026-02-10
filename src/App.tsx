@@ -1,13 +1,18 @@
 import './App.css'
+
+{/* TEXT GROUP: Main branding and price list headers */}
 import titleImg from './assets/Header/HoneyShroomTitle.svg'
 import priceListImg from './assets/Header/PriceList.svg'
+
+{/* PAPERS AND LOGOS GROUP: Layered paper background with social media links */}
 import paperPriceImg from './assets/Header/PaperPrice.svg'
 import blankPaperImg from './assets/Header/BlankPaper.svg'
 import twitterLogo from './assets/Header/Twitterlogo.svg'
 import vgenLogo from './assets/Header/vgenlogo.svg'
 import blueskyLogo from './assets/Header/blueskylogo.svg'
 import furaffinityLogo from './assets/Header/furaffinitylogo.svg'
-// NOWE IMPORTY:
+
+{/* EMAIL GROUP: Email information and icon */}
 import emailIcon from './assets/Header/EmailIcon.svg'
 import emailText from './assets/Header/EmailText.svg'
 
@@ -17,33 +22,7 @@ function App() {
       <main>
         <header className="hero-container">
           
-          {/* GRUPA PAPIERÓW I LOGOTYPÓW */}
-          <div className="papers-group">
-            
-            {/* Druga warstwa papieru (spód) */}
-            <img 
-              src={blankPaperImg} 
-              alt="Blank Paper Background" 
-              className="blank-paper-svg" 
-            />
-
-            {/* GRUPA LOGOTYPÓW */}
-            <div className="logos-group">
-              <img src={twitterLogo} alt="Twitter Logo" className="twitter-logo-svg" />
-              <img src={vgenLogo} alt="VGen Logo" className="vgen-logo-svg" />
-              <img src={blueskyLogo} alt="Bluesky Logo" className="bluesky-logo-svg" />
-              <img src={furaffinityLogo} alt="FurAffinity Logo" className="furaffinity-logo-svg" />
-            </div>
-
-            {/* Pierwsza warstwa papieru (na górze logotypów) */}
-            <img 
-              src={paperPriceImg} 
-              alt="Paper Background" 
-              className="paper-price-svg" 
-            />
-          </div>
-
-          {/* GRUPA TEKSTOWA (Tytuł i Cennik) */}
+          {/* TEXT GROUP: Main branding and price list headers */}
           <div className="text-group">
             <img 
               src={titleImg} 
@@ -57,7 +36,34 @@ function App() {
             />
           </div>
 
-          {/* NOWA GRUPA: EMAIL */}
+          {/* PAPERS AND LOGOS GROUP: Layered paper background with social media links */}
+          <div className="papers-group">
+            
+            {/* Paper with Prices */}
+            <img 
+              src={paperPriceImg} 
+              alt="Paper Background" 
+              className="paper-price-svg" 
+            />
+
+            {/* Bottom blank paper */}
+            <img 
+              src={blankPaperImg} 
+              alt="Blank Paper Background" 
+              className="blank-paper-svg" 
+            />
+
+            {/* LOGOS GROUP: Social media icons positioned between layers */}
+            <div className="logos-group">
+              <img src={twitterLogo} alt="Twitter Logo" className="twitter-logo-svg" />
+              <img src={vgenLogo} alt="VGen Logo" className="vgen-logo-svg" />
+              <img src={blueskyLogo} alt="Bluesky Logo" className="bluesky-logo-svg" />
+              <img src={furaffinityLogo} alt="FurAffinity Logo" className="furaffinity-logo-svg" />
+            </div>
+
+          </div>
+
+          {/* EMAIL GROUP: Email information and icon */}
           <div className="email-group">
             <img 
               src={emailIcon} 
@@ -70,7 +76,6 @@ function App() {
               className="email-text-svg" 
             />
           </div>
-
         </header>
       </main>
     </div>
