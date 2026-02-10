@@ -77,6 +77,16 @@ body {
   z-index: 1; 
 }
 
+/* Right side portfolio images */
+.portfolio-images-svg {
+  position: absolute;
+  z-index: 2;
+  right: calc(-1 * (100vw - 100%) / 2); 
+  top: 3%; 
+  width: 700px;
+  height: auto; 
+}
+
 /* --- LOGOS GROUP: Container for social media icons --- */
 .logos-group {
   position: absolute;

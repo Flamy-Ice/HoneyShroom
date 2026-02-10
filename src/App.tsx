@@ -7,6 +7,7 @@ import priceListImg from './assets/Header/PriceList.svg'
 {/* PAPERS AND LOGOS GROUP: Layered paper background with social media links */}
 import paperPriceImg from './assets/Header/PaperPrice.svg'
 import blankPaperImg from './assets/Header/BlankPaper.svg'
+import portfolioImages from './assets/Header/PortfolioImages.svg'
 import twitterLogo from './assets/Header/Twitterlogo.svg'
 import vgenLogo from './assets/Header/vgenlogo.svg'
 import blueskyLogo from './assets/Header/blueskylogo.svg'
@@ -51,6 +52,13 @@ function App() {
               src={blankPaperImg} 
               alt="Blank Paper Background" 
               className="blank-paper-svg" 
+            />
+
+            {/* Portfolio preview images */}
+            <img 
+              src={portfolioImages} 
+              alt="Portfolio Preview" 
+              className="portfolio-images-svg" 
             />
 
             {/* LOGOS GROUP: Social media icons positioned between layers */}
