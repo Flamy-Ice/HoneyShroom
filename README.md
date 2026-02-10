@@ -89,3 +89,4 @@ This project is licensed under the MIT License. Feel free to use it for your own
 ---
 
 Developed with ❤️ by Jakub Lewandowski
+
