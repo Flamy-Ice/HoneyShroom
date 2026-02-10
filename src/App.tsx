@@ -4,7 +4,8 @@ import priceListImg from './assets/Header/PriceList.svg'
 import paperPriceImg from './assets/Header/PaperPrice.svg'
 import blankPaperImg from './assets/Header/BlankPaper.svg'
 import twitterLogo from './assets/Header/Twitterlogo.svg'
-import vgenLogo from './assets/Header/vgenlogo.svg' // Nowy import
+import vgenLogo from './assets/Header/vgenlogo.svg'
+import blueskyLogo from './assets/Header/blueskylogo.svg' // Nowy import
 
 function App() {
   return (
@@ -26,11 +27,18 @@ function App() {
             className="twitter-logo-svg" 
           />
 
-          {/* NOWY ELEMENT: Logo VGen nałożone na blank-paper */}
+          {/* Logo VGen */}
           <img 
             src={vgenLogo} 
             alt="VGen Logo" 
             className="vgen-logo-svg" 
+          />
+
+          {/* NOWY ELEMENT: Logo Bluesky */}
+          <img 
+            src={blueskyLogo} 
+            alt="Bluesky Logo" 
+            className="bluesky-logo-svg" 
           />
           
           <img 

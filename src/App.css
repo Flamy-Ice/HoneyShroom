@@ -18,7 +18,7 @@ main {
   flex-direction: column;
   align-items: center;
   position: relative;
-  z-index: 3; /* Podbite, aby być nad wszystkim */
+  z-index: 3; 
   width: 100%;
 }
 
@@ -57,35 +57,40 @@ main {
   pointer-events: none;
 }
 
-/* --- NOWY ELEMENT: LOGO TWITTERA --- */
+/* --- LOGO TWITTERA --- */
 .twitter-logo-svg {
   position: absolute;
-  pointer-events: auto; /* Pozwala na kliknięcie w logo, jeśli dodasz link */
-  
-  /* --- MANIPULACJA POZYCJĄ I WIELKOŚCIĄ --- */
-  width: 125px;       /* Wielkość ikonki */
-  left: 30%;         /* Pozycja w poziomie (dostosuj do blank-paper) */
-  top: 65%;          /* Pozycja w pionie (dostosuj do blank-paper) */
-  
-  z-index: 1;        /* Wyżej niż blank-paper (0), niżej niż paper-price (2) */
-  /* ----------------------------------------- */
+  pointer-events: auto;
+  width: 125px;
+  left: 30%;
+  top: 65%;
+  z-index: 1;
 }
 
-/* --- NOWY ELEMENT: LOGO VGEN --- */
+/* --- LOGO VGEN --- */
 .vgen-logo-svg {
   position: absolute;
-  pointer-events: auto; /* Pozwala na kliknięcie, jeśli zrobisz z tego link */
+  pointer-events: auto;
+  width: 170px;
+  left: 41%;
+  top: 70%;
+  z-index: 1;
+}
+
+/* --- NOWY ELEMENT: LOGO BLUESKY --- */
+.bluesky-logo-svg {
+  position: absolute;
+  pointer-events: auto;
   
   /* --- MANIPULACJA POZYCJĄ I WIELKOŚCIĄ --- */
-  width: 170px;       /* Zmień tę wartość, aby powiększyć/pomniejszyć */
-  left: 41%;         /* Pozycja w poziomie względem lewej krawędzi */
-  top: 70%;          /* Pozycja w pionie względem góry kontenera */
+  width: 150px;       /* Zmień wielkość ikonki */
+  left: 26%;         /* Zmień pozycję w poziomie */
+  top: 90%;          /* Zmień pozycję w pionie */
   
-  /* z-index: 1 sprawia, że jest nad blank-paper (0), ale pod paper-price (2) */
-  z-index: 1;        
+  z-index: 1;        /* Nad blank-paper, pod paper-price */
   
-  /* Opcjonalnie: dodaj lekki obrót, jeśli chcesz, by pasowało do "rozrzuconego" papieru */
-  /* transform: rotate(-5deg); */
+  /* Opcjonalnie: lekki obrót, żeby pasowało do reszty */
+  /* transform: rotate(5deg); */
 }
 
 body {
