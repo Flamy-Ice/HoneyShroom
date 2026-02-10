@@ -2,7 +2,7 @@
 
 A sleek, modern, and high-performance portfolio website built to showcase creative work and technical expertise. This project focuses on clean UI/UX, speed, and type-safety.
 
-[Live Demo Link](https://link.com) (?)
+[Live Demo Link](https://honeyshroom.art)
 
 ---
 
@@ -58,28 +58,34 @@ The application will be available at **http://localhost:5173**.
 
 ---
 
-## 🏗️ Project Structure (?)
-src/
- ├── assets/        # Images, icons, and fonts
- ├── components/    # Reusable UI components
- ├── hooks/         # Custom React hooks
- ├── pages/         # Main view components
- ├── styles/        # Global styles and themes
- └── main.tsx       # Application entry point
+## 🏗️ Project Structure (TBA)
+
+| Folder | Purpose |
+| :--- | :--- |
+| **assets** | Images, icons, and fonts |
+| **styles** | Global styles and themes |
 
 ---
 
 ## 🔧 Scripts
-**npm run dev** | Starts the development server.
-**npm run build** | Builds the project for production.
-**npm run lint** | Runs ESLint to check for code issues.
-**npm run preview** | Locally previews the production build.
+
+| Command | Description |
+| :--- | :--- |
+| **npm run dev** | Starts the development server. |
+| **npm run build** | Builds the project for production. |
+| **nnpm run lint** | Runs ESLint to check for code issues. |
+| **npm run preview** | Locally previews the production build. |
 
 ---
 
-## 👤 Author (?)
-*HoneyShroom*
-**SocialMedia** | @ (https://link.com)
+## 👤 Author
+**HoneyShroom**
+| Social Media | Username |
+| :--- | :--- |
+| **Twitter** | [@HoneyShroomArt](https://x.com/HoneyShroomArt) |
+| **VGen** | [@HoneyShroom](https://vgen.co/honeyshroom) |
+| **Bluesky** | [@HoneyShroom](https://bsky.app/profile/honey-shroom.bsky.social) |
+| **Fur Affinity** | [@balladune](https://www.furaffinity.net/user/balladune) |
 
 ---
 
