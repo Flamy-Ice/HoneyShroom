@@ -1,6 +1,60 @@
 main {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 2rem;
-  text-align: left;
+  text-align: center;
+}
+
+.hero-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+  position: relative; /* Punkt odniesienia dla absolutnego papieru */
+  min-height: 600px; 
+}
+
+/* Kontener dla tekstów (obrazków tekstowych) */
+.text-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 2; /* Wyższa warstwa niż papier */
+  width: 100%;
+}
+
+.header-image {
+  height: auto;
+  max-width: 100%;
+  display: block;
+}
+
+.title-svg {
+  width: 1050px;
+}
+
+.pricelist-svg {
+  width: 900px;
+  margin-top: -100px; /* Nakładanie się na tytuł */
+}
+
+/* Wyodrębniona warstwa papieru w tle */
+.paper-price-svg {
+  position: absolute;
+  width: 800px; 
+  
+  /* Wyrównanie do krawędzi ekranu */
+  left: calc(-1 * (100vw - 100%) / 2); 
+  
+  /* Przesunięcie wyżej (z 40% na 20%) */
+  top: 10%; 
+  
+  /* Niższa warstwa niż .text-content */
+  z-index: 1; 
+  pointer-events: none;
+}
+
+body {
+  overflow-x: hidden;
+  margin: 0;
 }
