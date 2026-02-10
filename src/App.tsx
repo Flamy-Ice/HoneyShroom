@@ -61,12 +61,20 @@ function App() {
               className="portfolio-images-svg" 
             />
 
-            {/* LOGOS GROUP: Social media icons positioned between layers */}
+            {/* LOGOS GROUP: Social media icons with external links */}
             <div className="logos-group">
-              <img src={twitterLogo} alt="Twitter Logo" className="twitter-logo-svg" />
-              <img src={vgenLogo} alt="VGen Logo" className="vgen-logo-svg" />
-              <img src={blueskyLogo} alt="Bluesky Logo" className="bluesky-logo-svg" />
-              <img src={furaffinityLogo} alt="FurAffinity Logo" className="furaffinity-logo-svg" />
+              <a href="https://x.com/HoneyShroomArt" target="_blank" rel="noopener noreferrer" className="twitter-logo-svg">
+                <img src={twitterLogo} alt="Twitter Logo" />
+              </a>
+              <a href="https://vgen.co/honeyshroom" target="_blank" rel="noopener noreferrer" className="vgen-logo-svg">
+                <img src={vgenLogo} alt="VGen Logo" />
+              </a>
+              <a href="https://bsky.app/profile/honey-shroom.bsky.social" target="_blank" rel="noopener noreferrer" className="bluesky-logo-svg">
+                <img src={blueskyLogo} alt="Bluesky Logo" />
+              </a>
+              <a href="https://www.furaffinity.net/user/balladune" target="_blank" rel="noopener noreferrer" className="furaffinity-logo-svg">
+                <img src={furaffinityLogo} alt="FurAffinity Logo" />
+              </a>
             </div>
 
           </div>
