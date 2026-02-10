@@ -97,6 +97,17 @@ body {
   top: 3%; 
   width: 700px;
   height: auto; 
+  pointer-events: auto;
+  cursor: pointer;
+  transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+  will-change: transform;
+  backface-visibility: hidden;
+  transform: scale(1) translateZ(0);
+}
+
+/* Hover effect for portfolio images */
+.portfolio-images-svg:hover {
+  transform: scale(1.05) translateY(-5px); 
 }
 
 /* --- LOGOS GROUP: Container for social media links --- */
@@ -170,11 +181,8 @@ body {
   align-items: center; 
   gap: 5px;           
   z-index: 15;        
-  
   top: 108%;           
   left: 34%; 
-
-  /* Matches the animation style of paper-price-svg */
   cursor: pointer;
   transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
   will-change: transform;
