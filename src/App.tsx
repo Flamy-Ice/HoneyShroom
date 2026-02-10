@@ -6,57 +6,42 @@ import blankPaperImg from './assets/Header/BlankPaper.svg'
 import twitterLogo from './assets/Header/Twitterlogo.svg'
 import vgenLogo from './assets/Header/vgenlogo.svg'
 import blueskyLogo from './assets/Header/blueskylogo.svg'
-import furaffinityLogo from './assets/Header/furaffinitylogo.svg' // Nowy import
+import furaffinityLogo from './assets/Header/furaffinitylogo.svg'
 
 function App() {
   return (
     <div className="app-wrapper">
       <main>
         <header className="hero-container">
-          {/* --- WARSTWY TŁA --- */}
           
-          <img 
-            src={blankPaperImg} 
-            alt="Blank Paper Background" 
-            className="blank-paper-svg" 
-          />
+          {/* GRUPA PAPIERÓW I LOGOTYPÓW */}
+          <div className="papers-group">
+            
+            {/* Druga warstwa papieru (spód) */}
+            <img 
+              src={blankPaperImg} 
+              alt="Blank Paper Background" 
+              className="blank-paper-svg" 
+            />
 
-          {/* Logo Twittera */}
-          <img 
-            src={twitterLogo} 
-            alt="Twitter Logo" 
-            className="twitter-logo-svg" 
-          />
+            {/* GRUPA LOGOTYPÓW (Wewnątrz grupy papierów) */}
+            <div className="logos-group">
+              <img src={twitterLogo} alt="Twitter Logo" className="twitter-logo-svg" />
+              <img src={vgenLogo} alt="VGen Logo" className="vgen-logo-svg" />
+              <img src={blueskyLogo} alt="Bluesky Logo" className="bluesky-logo-svg" />
+              <img src={furaffinityLogo} alt="FurAffinity Logo" className="furaffinity-logo-svg" />
+            </div>
 
-          {/* Logo VGen */}
-          <img 
-            src={vgenLogo} 
-            alt="VGen Logo" 
-            className="vgen-logo-svg" 
-          />
+            {/* Pierwsza warstwa papieru (na górze logotypów) */}
+            <img 
+              src={paperPriceImg} 
+              alt="Paper Background" 
+              className="paper-price-svg" 
+            />
+          </div>
 
-          {/* Logo Bluesky */}
-          <img 
-            src={blueskyLogo} 
-            alt="Bluesky Logo" 
-            className="bluesky-logo-svg" 
-          />
-
-          {/* NOWY ELEMENT: Logo FurAffinity */}
-          <img 
-            src={furaffinityLogo} 
-            alt="FurAffinity Logo" 
-            className="furaffinity-logo-svg" 
-          />
-          
-          <img 
-            src={paperPriceImg} 
-            alt="Paper Background" 
-            className="paper-price-svg" 
-          />
-          
-          {/* --- WARSTWA TEKSTOWA --- */}
-          <div className="text-content">
+          {/* GRUPA TEKSTOWA (Tytuł i Cennik) */}
+          <div className="text-group">
             <img 
               src={titleImg} 
               alt="HoneyShroom Title" 
@@ -68,6 +53,7 @@ function App() {
               className="header-image pricelist-svg" 
             />
           </div>
+
         </header>
       </main>
     </div>

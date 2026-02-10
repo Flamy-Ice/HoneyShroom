@@ -4,22 +4,32 @@ main {
   text-align: center;
 }
 
+body {
+  overflow-x: hidden;
+  margin: 0;
+}
+
 .hero-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-bottom: 2rem;
   position: relative;
-  min-height: 600px; 
+  min-height: 800px; /* Zwiększone, by pomieścić wystające elementy */
 }
 
-.text-content {
+/* --- KONTENER GRUPY TEKSTOWEJ --- */
+.text-group {
   display: flex;
   flex-direction: column;
   align-items: center;
   position: relative;
-  z-index: 3; 
+  z-index: 10; /* Najwyższa warstwa */
   width: 100%;
+  
+  /* Tutaj możesz manipulować całą grupą tekstu */
+  /* transform: scale(0.9); */
+  /* margin-top: 20px; */
 }
 
 .header-image {
@@ -37,73 +47,77 @@ main {
   margin-top: -100px;
 }
 
+/* --- KONTENER PAPIERÓW (TŁA) --- */
+.papers-group {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 1;
+
+  /* Tutaj możesz manipulować obiema kartkami naraz */
+  /* transform: rotate(2deg); */
+}
+
 /* Pierwsza warstwa papieru (na górze logo) */
 .paper-price-svg {
   position: absolute;
-  width: 770px; 
+  width: 780px; 
   left: calc(-1 * (100vw - 100%) / 2); 
-  top: 12%; 
-  z-index: 2; 
-  pointer-events: none;
+  top: 8%; 
+  z-index: 5; 
 }
 
 /* Druga warstwa papieru (pod spodem logo) */
 .blank-paper-svg {
   position: absolute;
-  width: 500px; 
-  left: 17%; 
-  top: 58%; 
-  z-index: 0; 
-  pointer-events: none;
+  width: 520px; 
+  left: 16%; 
+  top: 38%; 
+  z-index: 1; 
 }
 
-/* --- LOGO TWITTERA --- */
-.twitter-logo-svg {
+/* --- KONTENER LOGOTYPÓW --- */
+.logos-group {
   position: absolute;
-  pointer-events: auto;
+  width: 100%;
+  height: 100%;
+  top: -20%;
+  left: 0;
+  z-index: 3; /* Pomiędzy blank-paper a paper-price */
+  pointer-events: none;
+
+  /* Tutaj możesz manipulować wszystkimi ikonkami naraz */
+  transform: scale(1.05) translateX(10px);
+}
+
+.logos-group img {
+  position: absolute;
+  pointer-events: auto; /* Przywracamy klikalność dla samych ikonek */
+}
+
+.twitter-logo-svg {
   width: 125px;
   left: 30%;
   top: 65%;
-  z-index: 1;
 }
 
-/* --- LOGO VGEN --- */
 .vgen-logo-svg {
-  position: absolute;
-  pointer-events: auto;
   width: 170px;
   left: 41%;
   top: 70%;
-  z-index: 1;
 }
 
-/* --- LOGO BLUESKY --- */
 .bluesky-logo-svg {
-  position: absolute;
-  pointer-events: auto;
   width: 150px;
   left: 26%;
-  top: 90%;
-  z-index: 1;
+  top: 85%;
 }
 
-/* --- NOWY ELEMENT: LOGO FURAFFINITY --- */
 .furaffinity-logo-svg {
-  position: absolute;
-  pointer-events: auto;
-  
-  /* --- TUTAJ MANIPULUJ WIELKOŚCIĄ I POZYCJĄ --- */
-  width: 150px;        /* Wielkość ikonki */
-  left: 38%;          /* Pozycja w poziomie (względem lewej krawędzi) */
-  top: 100%;           /* Pozycja w pionie (względem góry) */
-  
-  z-index: 1;         /* Nad blank-paper, pod paper-price */
-  
-  /* Opcjonalnie: odkomentuj poniżej, by obrócić logo */
-  /* transform: rotate(-5deg); */
-}
-
-body {
-  overflow-x: hidden;
-  margin: 0;
+  width: 150px;
+  left: 38%;
+  top: 95%;
 }
