@@ -43,45 +43,48 @@ function App() {
             />
           </div>
 
-          {/* PAPERS AND LOGOS GROUP: Layered paper background with social media links */}
+          {/* PAPERS GROUP: Layered background elements */}
           <div className="papers-group">
             
-            {/* Paper with Prices */}
-            <img 
-              src={paperPriceImg} 
-              alt="Paper Background" 
-              className="paper-price-svg" 
-            />
+            {/* LEFT SIDE STACK: Groups papers and logos to keep them "glued" together */}
+            <div className="left-side-stack">
+              {/* Paper with Prices */}
+              <img 
+                src={paperPriceImg} 
+                alt="Paper Background" 
+                className="paper-price-svg" 
+              />
 
-            {/* Bottom blank paper */}
-            <img 
-              src={blankPaperImg} 
-              alt="Blank Paper Background" 
-              className="blank-paper-svg" 
-            />
+              {/* Bottom blank paper - now anchored to the price paper container */}
+              <img 
+                src={blankPaperImg} 
+                alt="Blank Paper Background" 
+                className="blank-paper-svg" 
+              />
 
-            {/* Portfolio preview images */}
+              {/* LOGOS GROUP: Social media icons moved inside the stack for consistency */}
+              <div className="logos-group">
+                <a href="https://x.com/HoneyShroomArt" target="_blank" rel="noopener noreferrer" className="twitter-logo-svg">
+                  <img src={twitterLogo} alt="Twitter Logo" />
+                </a>
+                <a href="https://vgen.co/honeyshroom" target="_blank" rel="noopener noreferrer" className="vgen-logo-svg">
+                  <img src={vgenLogo} alt="VGen Logo" />
+                </a>
+                <a href="https://bsky.app/profile/honey-shroom.bsky.social" target="_blank" rel="noopener noreferrer" className="bluesky-logo-svg">
+                  <img src={blueskyLogo} alt="Bluesky Logo" />
+                </a>
+                <a href="https://www.furaffinity.net/user/balladune" target="_blank" rel="noopener noreferrer" className="furaffinity-logo-svg">
+                  <img src={furaffinityLogo} alt="FurAffinity Logo" />
+                </a>
+              </div>
+            </div>
+
+            {/* Portfolio preview images - remains pinned to the right edge */}
             <img 
               src={portfolioImages} 
               alt="Portfolio Preview" 
               className="portfolio-images-svg" 
             />
-
-            {/* LOGOS GROUP: Social media icons with external links */}
-            <div className="logos-group">
-              <a href="https://x.com/HoneyShroomArt" target="_blank" rel="noopener noreferrer" className="twitter-logo-svg">
-                <img src={twitterLogo} alt="Twitter Logo" />
-              </a>
-              <a href="https://vgen.co/honeyshroom" target="_blank" rel="noopener noreferrer" className="vgen-logo-svg">
-                <img src={vgenLogo} alt="VGen Logo" />
-              </a>
-              <a href="https://bsky.app/profile/honey-shroom.bsky.social" target="_blank" rel="noopener noreferrer" className="bluesky-logo-svg">
-                <img src={blueskyLogo} alt="Bluesky Logo" />
-              </a>
-              <a href="https://www.furaffinity.net/user/balladune" target="_blank" rel="noopener noreferrer" className="furaffinity-logo-svg">
-                <img src={furaffinityLogo} alt="FurAffinity Logo" />
-              </a>
-            </div>
 
           </div>
 
