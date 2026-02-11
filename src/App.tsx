@@ -17,6 +17,11 @@ import furaffinityLogo from './assets/Header/furaffinitylogo.svg'
 import emailIcon from './assets/Header/EmailIcon.svg'
 import emailText from './assets/Header/EmailText.svg'
 
+{/* OUR ARTWORKS: Section assets */}
+import artworksTitle from './assets/OurArtworks/Title.svg'
+import artworksArrow from './assets/OurArtworks/Arrow.svg'
+import artworksLine from './assets/OurArtworks/Line.svg'
+
 function App() {
   /* Handler to copy email address to clipboard */
   const handleCopyEmail = () => {
@@ -102,6 +107,30 @@ function App() {
             />
           </div>
         </header>
+
+        {/* --- OUR ARTWORKS SECTION --- */}
+        <section className="artworks-container">
+          <div className="artworks-header">
+            <img 
+              src={artworksTitle} 
+              alt="Our Artworks" 
+              className="artworks-title-svg" 
+            />
+            <img 
+              src={artworksArrow} 
+              alt="Arrow" 
+              className="artworks-arrow-svg" 
+            />
+          </div>
+          <div className="artworks-divider">
+            <img 
+              src={artworksLine} 
+              alt="Divider Line" 
+              className="artworks-line-svg" 
+            />
+          </div>
+        </section>
+
       </main>
     </div>
   )
