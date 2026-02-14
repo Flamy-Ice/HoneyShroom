@@ -1,0 +1,80 @@
+/* Header.css */
+
+.main-header {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* POMARAŃCZOWY - Zwiększona wysokość przez padding */
+.orange-container {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  
+  width: 50%;
+  /* Zwiększyłem z 50px na 75px dla efektu "większej wysokości" */
+  padding: 75px 25px; 
+  background-color: #ffa500;
+  color: white;
+  text-align: center;
+  border-radius: 12px;
+  font-weight: bold;
+  font-size: 1.5rem;
+  
+  z-index: 10;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* KONTENER BOCZNY */
+.sides-wrapper {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+}
+
+/* NIEBIESKI - Zajmuje więcej miejsca (flex: 1.5) */
+.blue-container {
+  flex: 1.2; 
+  background-color: #007bff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+/* CZERWONY - Zajmuje standardowe miejsce (flex: 1) */
+.red-container {
+  flex: 1;
+  background-color: #dc3545;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+/* Responsywność */
+@media (max-width: 768px) {
+  .sides-wrapper {
+    flex-direction: column;
+  }
+  
+  /* Na mobile flex: 1.5 sprawi, że niebieski będzie wyższy niż czerwony */
+  .orange-container {
+    width: 92%;
+    padding: 45px 15px; /* Delikatne zmniejszenie na mobile, by nie przykryć wszystkiego */
+    font-size: 1.2rem;
+  }
+}
