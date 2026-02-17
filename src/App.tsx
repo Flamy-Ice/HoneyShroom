@@ -1,3 +1,7 @@
+// Importy obrazków z Twojej ścieżki: src/assets/header/
+import priceSheet from './assets/header/pricesheet.svg';
+import blankPaper from './assets/header/blankpaper.svg';
+
 import './styles/header.css';
 
 function App() {
@@ -10,15 +14,26 @@ function App() {
 
         <div className="sides-wrapper">
           <div className="blue-container">
-            NIEBIESKI (LEWA STRONA)
+            {/* Kontener spinający oba obrazki */}
+            <div className="images-wrapper">
+              {/* Używamy zaimportowanych zmiennych w klamrach {} */}
+              <img 
+                src={priceSheet} 
+                className="img-main" 
+                alt="Price Sheet" 
+              />
+              <img 
+                src={blankPaper} 
+                className="img-overlay" 
+                alt="Blank Paper" 
+              />
+            </div>
           </div>
           <div className="red-container">
             CZERWONY (PRAWA STRONA)
           </div>
         </div>
       </header>
-      
-      {/* Gdy tutaj dodasz <section> lub <footer>, header naturalnie się do nich dopasuje */}
     </div>
   );
 }
