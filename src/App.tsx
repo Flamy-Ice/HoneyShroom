@@ -4,6 +4,7 @@ import twitterIcon from './assets/header/twitter.svg';
 import vgenIcon from './assets/header/vgen.svg';
 import blueskyIcon from './assets/header/bluesky.svg';
 import furaffinityIcon from './assets/header/furaffinity.svg';
+import titleImg from './assets/header/title.svg';
 
 import './styles/header.css';
 
@@ -12,7 +13,7 @@ function App() {
     <div className="App">
       <header className="main-header">
         <div className="orange-container">
-          POMARAŃCZOWY (GÓRA)
+          <img src={titleImg} className="title-img" alt="Title" />
         </div>
 
         <div className="sides-wrapper">
