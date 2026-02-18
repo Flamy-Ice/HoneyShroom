@@ -12,6 +12,12 @@ import emailIcon from './assets/header/email.svg';
 import './styles/header.css';
 
 function App() {
+  // Funkcja kopiująca email do schowka
+  const copyEmail = () => {
+    const email = "honeyshroomart@gmail.com";
+    navigator.clipboard.writeText(email);
+  };
+
   return (
     <div className="App">
       <header className="main-header">
@@ -77,7 +83,12 @@ function App() {
 
         {/* DOLNY POMARAŃCZOWY KONTENER Z EMAILEM */}
         <div className="orange-container-bottom">
-          <img src={emailIcon} className="email-icon-bottom" alt="Email Contact" />
+          <img 
+            src={emailIcon} 
+            className="email-icon-bottom" 
+            alt="Email Contact" 
+            onClick={copyEmail} // Dodana funkcja kliknięcia
+          />
         </div>
       </header>
     </div>
