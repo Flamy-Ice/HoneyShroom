@@ -5,8 +5,9 @@ import vgenIcon from './assets/header/vgen.svg';
 import blueskyIcon from './assets/header/bluesky.svg';
 import furaffinityIcon from './assets/header/furaffinity.svg';
 import titleImg from './assets/header/title.svg';
-// Import nowego obrazka
 import portfolioImg from './assets/header/portfolioimages.svg';
+// Import nowej ikonki email
+import emailIcon from './assets/header/email.svg';
 
 import './styles/header.css';
 
@@ -72,6 +73,11 @@ function App() {
             {/* Nowy obrazek portfolio */}
             <img src={portfolioImg} className="portfolio-img" alt="Portfolio" />
           </div>
+        </div>
+
+        {/* DOLNY POMARAŃCZOWY KONTENER Z EMAILEM */}
+        <div className="orange-container-bottom">
+          <img src={emailIcon} className="email-icon-bottom" alt="Email Contact" />
         </div>
       </header>
     </div>
