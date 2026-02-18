@@ -25,7 +25,6 @@
   text-align: center;
   border-bottom-left-radius: 12px;
   border-bottom-right-radius: 12px;
-  /* Zmieniono z-index na 9, aby był pod .img-main (który ma 10) */
   z-index: 9; 
   box-shadow: 0 4px 15px rgba(0,0,0,0.2);
   display: flex;
@@ -136,10 +135,24 @@
   background-color: #dc3545;
   display: flex;
   align-items: center;
-  justify-content: center;
+  /* Przytulenie do prawej strony */
+  justify-content: flex-end; 
   color: white;
-  font-size: 1.8rem;
-  font-weight: bold;
+  overflow: hidden;
+}
+
+.portfolio-img {
+  /* MANIPULACJA WIELKOŚCIĄ */
+  width: 80%; /* Zmień tę wartość, aby obrazek był większy/mniejszy */
+  height: auto;
+  display: block;
+  
+  /* MANIPULACJA POZYCJĄ */
+  margin-right: 0%;   /* Odstęp od prawej krawędzi */
+  margin-top: 0%;     /* Przesunięcie góra/dół */
+  
+  /* Alternatywnie możesz użyć transform do precyzyjnego przesuwania:
+     transform: translate(0px, 0px); */
 }
 
 @media (max-width: 768px) {
@@ -156,4 +169,10 @@
     width: 100%; 
     border-radius: 0; 
   }
+  /* Dopasowanie portfolio na mobile */
+  .red-container { 
+    min-height: 50vh; 
+    justify-content: center; 
+  }
+  .portfolio-img { width: 70%; }
 }

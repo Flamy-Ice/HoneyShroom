@@ -5,6 +5,8 @@ import vgenIcon from './assets/header/vgen.svg';
 import blueskyIcon from './assets/header/bluesky.svg';
 import furaffinityIcon from './assets/header/furaffinity.svg';
 import titleImg from './assets/header/title.svg';
+// Import nowego obrazka
+import portfolioImg from './assets/header/portfolioimages.svg';
 
 import './styles/header.css';
 
@@ -65,8 +67,10 @@ function App() {
               </div>
             </div>
           </div>
+          
           <div className="red-container">
-            CZERWONY (PRAWA STRONA)
+            {/* Nowy obrazek portfolio */}
+            <img src={portfolioImg} className="portfolio-img" alt="Portfolio" />
           </div>
         </div>
       </header>
